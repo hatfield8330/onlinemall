@@ -1,0 +1,59 @@
+@import "./normalize.css";
+body{
+    font-family: "Helvetica Neue", Helvetica,"PingFang SC","Hiragino Sans GB"
+    ,"Microsoft","Yahei","微软雅黑",Arial,sans-serif;
+    user-select: none;/*禁止用户鼠标在页面上选中文字/图片等*/
+    /* webkit是苹果浏览器引擎，tap点击，highlight背景高亮，color颜色，颜色用数值调节 */
+    -webkit-tap-highlight-color: transparent;
+    background: var(--color-background);
+    color: var(--color-text);
+    width: 100vw;
+}
+:root{
+    /* 以下均为定义变量可以在css中用var使用 */
+    /* 文字颜色 */
+    --color-text: #666;  
+    /* 文字高亮颜色 */
+    --color-high-text: #ff5777;
+    /* 整体背景颜色，用于设置导航的背景颜色 */
+    --color-lint: #ff8198;
+    /* 白色背景颜色 */
+    --color-background:#fff;
+    /* 字体大小 */
+    --font-size: 14px;
+    --line-height:1.5;
+}
+
+*,
+*::before,
+*::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a{
+    color: var(--color-text);
+    text-decoration: none;
+}
+
+.clear-fix::after{
+    clear: both;
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    visibility: hidden;
+}
+
+.clear-fix{
+    zoom: 1;
+}
+
+.left{
+    float: left;
+}
+
+.right{
+    float: right;
+}
